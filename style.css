@@ -1,0 +1,174 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+:root{
+  --bg-body: hsl(var(--hue), 22%, 20%);
+  --ff-body: 'Epilogue', sans-serif;
+  --hue: 250;
+  --cprimary-body: hsl(var(--hue), 0%, 100%);
+  --csecundary-body: hsl(var(--hue), 50%, 80%);
+  --csecundary-body-dark: hsl(var(--hue), 100%, 11%);
+  --fs-header: 4rem;
+    font-size: 62,5%;
+
+}
+
+body{
+  background-color: var(--bg-body);
+  font-family: var(--ff-body);
+  color: var(--cprimary-body);
+}
+main{
+  display: grid;
+  gap: 3.2rem;
+}
+
+main{
+  grid-template-areas: "A B B B" 
+  "C C C D";
+}
+
+main div:nth-child(1){
+  grid-area: A;
+
+}
+
+main div:nth-child(2){
+  grid-area: B;
+}
+
+main div:nth-child(3){
+  grid-area: C;
+}
+
+main div:nth-child(4){
+  grid-area: D;
+}
+
+
+.page{
+  max-width: 33rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 904px){
+   :root{
+    --fs-header: 5.6rem;
+   } 
+  
+  
+  .page{
+      max-width: 117rem;
+      padding: 5rem;
+    }
+
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+header{
+  margin-top: 10rem;
+  text-align: center;
+  animation-name: topdown;
+  animation-duration: 800ms;
+  animation-delay: 300ms;
+
+}
+
+header p{
+  color: var(--csecundary-body);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  margin-top: 1.7rem;
+  animation: topdown;
+  animation-duration: 1s;
+  animation-delay: 500ms;
+}
+
+header h1{
+  font-weight: 800;
+  font-size: 4.0rem;
+  line-height: 4.8rem;
+  margin-bottom: 8rem;
+
+}
+.card{
+  position: relative;
+  
+}
+.card img:hover{
+  transform: scale(1.1);
+  opacity: 0.4;
+  transition-property: transform;
+  transition-duration: 300ms;
+
+
+}
+
+.card img{
+  height: 41.6rem;
+  object-fit: cover;
+  border-radius: 6px;
+  
+ 
+
+}
+.card h2{
+  color: var(--cprimary-body);
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 4rem;
+  position: absolute;
+  bottom: 5rem;
+  left: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  
+}
+
+.card h2 spam{
+  border-radius: 1.8rem;
+  background-color: var(--cprimary-body);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--csecundary-body-dark);
+  padding: 0 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  line-height: 3rem;
+}
+
+
+header p{
+
+  animation: topdown;
+  animation-duration: 1s;
+  animation-delay: 500ms;
+}
+
+@keyframes topdown{
+  0%{
+    opacity: 0;
+    transform: translateY(-15);
+  }
+
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+}
+
